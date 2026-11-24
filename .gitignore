@@ -19,3 +19,10 @@ mlruns/
 # Temporary files
 *.log
 .DS_Store
+
+# Raw datasets managed by DVC
+data/raw/train.csv
+data/raw/later.csv
+
+# MLflow artifacts
+mlartifacts/
