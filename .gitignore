@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# DVC cache
+.dvc/cache/
+
+# MLflow
+mlruns/
+*.db-wal
+*.db-shm
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.log
+.DS_Store
