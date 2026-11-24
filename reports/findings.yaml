@@ -1,0 +1,55 @@
+group_id: G163
+problem_id: MP166
+data_issues:
+  leaking_column:
+    present: false
+    column: null
+  unit_mixup:
+    present: true
+    column: rain_mm
+    group_value: Red Line
+    factor: 0.1
+  sentinel_value:
+    present: true
+    column: entries_per_hour
+    value: 999
+    count: 1
+  duplicate_rows:
+    present: true
+    count: 37
+  stuck_sensor:
+    present: true
+    column: temp_c
+    start_date: '2026-02-04'
+    end_date: '2026-02-25'
+    value: 11.5
+    count: 102
+  target_typos:
+    present: false
+    column: null
+  spelling_variants:
+    present: true
+    column: day_type
+    true_levels: 3
+tracking:
+  experiment_name: null
+  best_run_id: null
+  registered_model_name: null
+  champion_version: null
+monitoring:
+  psi:
+    hour: 0.049000716119895135
+    nearby_offices: 0.03830198994505327
+    temp_c: 0.03238785167404127
+    rain_mm: 0.032547508914017226
+    feeder_buses: 4.073468330265504
+    ticket_price_rs: 0.05993350916504449
+  most_drifted_feature: feeder_buses
+  mae_by_group:
+    Red Line: null
+    Blue Line: null
+    Yellow Line: null
+  worst_served_group: null
+  mae_v1_on_check: null
+  mae_v2_on_check: null
+  decision: null
