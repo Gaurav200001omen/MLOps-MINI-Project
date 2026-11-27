@@ -2,9 +2,11 @@ import joblib
 import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
+from app.logging_config import get_json_logger
 
 app = FastAPI(title="MP166 Metro Station Crowd API")
 model = joblib.load("models/model.joblib")
+logger = get_json_logger()
 
 
 class PredictionRequest(BaseModel):
@@ -27,4 +29,6 @@ def health():
 def predict(req: PredictionRequest):
     df = pd.DataFrame([req.model_dump()])
     pred = float(model.predict(df)[0])
-    return {"prediction": round(pred, 2)}
+    result = round(pred, 2)
+    logger.info("prediction", extra={"extra_data": {"line": req.line, "prediction": result}})
+    return {"prediction": result}

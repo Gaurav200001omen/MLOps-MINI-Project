@@ -1,4 +1,4 @@
-group_id: G163
+﻿group_id: G163
 problem_id: MP166
 data_issues:
   leaking_column:
@@ -35,21 +35,21 @@ tracking:
   experiment_name: "mp166-metro-crowd"
   best_run_id: "40bdf635e46d461c94b109722a48096c"
   registered_model_name: "mp166-metro-model"
-  champion_version: 1
+  champion_version: 2
 monitoring:
   psi:
-    hour: 0.049000716119895135
-    nearby_offices: 0.03830198994505327
-    temp_c: 0.03238785167404127
-    rain_mm: 0.032547508914017226
-    feeder_buses: 4.073468330265504
-    ticket_price_rs: 0.05993350916504449
+    hour: 0.0442
+    nearby_offices: 0.044
+    temp_c: 0.0525
+    rain_mm: 0.0358
+    feeder_buses: 6.5032
+    ticket_price_rs: 0.0569
   most_drifted_feature: feeder_buses
   mae_by_group:
-    Red Line: null
-    Blue Line: null
-    Yellow Line: null
-  worst_served_group: null
-  mae_v1_on_check: null
-  mae_v2_on_check: null
-  decision: null
+    Red Line: 259.75
+    Blue Line: 1543.22
+    Yellow Line: 253.31
+  worst_served_group: Blue Line
+  mae_v1_on_check: 648.64
+  mae_v2_on_check: 338.1
+  decision: promote
